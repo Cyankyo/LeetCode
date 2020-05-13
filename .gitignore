@@ -1,0 +1,33 @@
+
+# 忽略库文件
+*.class
+*.dll
+#*.exe
+*.o
+*.so
+
+# 忽略maven编译的target文件夹
+target/
+
+# 忽略Eclipse的工程文件
+.classpath
+.project
+.externalToolBuilders/
+.metadata
+.settings/
+
+# 忽略IntelliJ IDEA的工程文件
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+# Mac
+.DS_Store
+
+# 忽略Maven相关目录
+.mvn/
+mvnw
+mvnw.*
+
