@@ -3,7 +3,7 @@
  *
  * File Created at 2022/1/20
  *
- * Copyright 2016 CMCC Corporation Limited.
+ * Copyright 2016 kyo Corporation Limited.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information of
@@ -17,7 +17,7 @@ package Q25;
 /***
  * @Type
  * @Desc
- * @Author chentuoyi
+ * @Author cyankyo
  * @Date 2022/1/20 15:08
  * @Version 1.0
  */
@@ -89,5 +89,5 @@ public class Solution {
  *
  * Date Author Note
  * -------------------------------------------------------------------------
- * 2022/1/20 chentuoyi create
+ * 2022/1/20 cyankyo create
  */

@@ -1,7 +1,7 @@
 /*
- * Project: java-strategy
+ * Project: LeetCode
  *
- * File Created at 2019/3/14
+ * File Created at 2022/2/24
  *
  * Copyright 2016 kyo Corporation Limited.
  * All rights reserved.
@@ -12,13 +12,13 @@
  * accordance with the terms of the license.
  */
 
-package Q5;
+package Q32;
 
-/**
- * @Type Solution.java
+/***
+ * @Type
  * @Desc
  * @Author cyankyo
- * @Date 2019/3/14 19:58
+ * @Date 2022/2/24 16:33
  * @Version 1.0
  */
 public class Solution {
@@ -30,5 +30,5 @@ public class Solution {
  *
  * Date Author Note
  * -------------------------------------------------------------------------
- * 2019/3/14 cyankyo create
+ * 2022/2/24 cyankyo create
  */

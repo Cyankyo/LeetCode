@@ -3,7 +3,7 @@
  *
  * File Created at 2022/2/22
  *
- * Copyright 2016 CMCC Corporation Limited.
+ * Copyright 2016 kyo Corporation Limited.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information of
@@ -22,7 +22,7 @@ import java.util.Map;
 /***
  * @Type
  * @Desc
- * @Author chentuoyi
+ * @Author cyankyo
  * @Date 2022/2/22 16:26
  * @Version 1.0
  */
@@ -146,5 +146,5 @@ class Solution {
  *
  * Date Author Note
  * -------------------------------------------------------------------------
- * 2022/2/22 chentuoyi create
+ * 2022/2/22 cyankyo create
  */

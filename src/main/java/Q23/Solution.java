@@ -3,7 +3,7 @@
  *
  * File Created at 2019/2/1
  *
- * Copyright 2016 CMCC Corporation Limited.
+ * Copyright 2016 kyo Corporation Limited.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information of
@@ -17,7 +17,7 @@ package Q23;
 /**
  * @Type Solution.java
  * @Desc
- * @Author chentuoyi
+ * @Author cyankyo
  * @Date 2019/2/1 19:19
  * @Version 1.0
  */
@@ -91,5 +91,5 @@ public class Solution {
  *
  * Date Author Note
  * -------------------------------------------------------------------------
- * 2019/2/1 chentuoyi create
+ * 2019/2/1 cyankyo create
  */
