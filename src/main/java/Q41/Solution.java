@@ -1,7 +1,7 @@
 /*
- * Project: java-strategy
+ * Project: LeetCode
  *
- * File Created at 2018/11/19
+ * File Created at 2022/2/24
  *
  * Copyright 2016 kyo Corporation Limited.
  * All rights reserved.
@@ -12,36 +12,35 @@
  * accordance with the terms of the license.
  */
 
-package Q62;
+package Q41;
 
-/**
- * @Type Solution.java
+/***
+ * @Type
  * @Desc
  * @Author cyankyo
- * @Date 2018/11/19 18:23
+ * @Date 2022/2/24 17:49
  * @Version 1.0
  */
 public class Solution {
-    public static int uniquePaths(int m, int n) {
-        int[][] route = new int[m][n];
-
-        for (int i = 0; i < m; i++) {
-            route[i][0] = 1;
+    public int firstMissingPositive(int[] nums) {
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            while (nums[i] <= n && nums[i] > 0 && nums[nums[i] - 1] != nums[i]) {
+                int temp = nums[nums[i] - 1];
+                nums[nums[i] - 1] = nums[i];
+                nums[i] = temp;
+            }
         }
         for (int i = 0; i < n; i++) {
-            route[0][i] = 1;
-        }
-        for (int i = 1; i < m; i++) {
-            for (int j = 1; j < n; j++) {
-                route[i][j] = route[i - 1][j] + route[i][j - 1];
+            if (nums[i] != i + 1) {
+                return i + 1;
             }
-
         }
-        return route[m-1][n-1];
+        return n + 1;
     }
 
     public static void main(String[] args) {
-         System.out.println(uniquePaths(7,3));
+        System.out.print(new Solution().firstMissingPositive(new int[]{-1, 4, 2, 1, 9, 10}));
     }
 }
 
@@ -51,5 +50,5 @@ public class Solution {
  *
  * Date Author Note
  * -------------------------------------------------------------------------
- * 2018/11/19 cyankyo create
+ * 2022/2/24 cyankyo create
  */
