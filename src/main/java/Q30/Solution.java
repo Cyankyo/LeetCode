@@ -120,7 +120,7 @@ class Solution {
                 if (num == wordNum) {
                     location.add(j);
                 }
-                if ( num > 0) {
+                if (num > 0) {
                     String firstWord = s.substring(j, j + wordLength);
                     int v = hasWords.get(firstWord);
                     hasWords.put(firstWord, v - 1);
