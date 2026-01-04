@@ -24,7 +24,13 @@ package Q44;
 public class Solution {
 
 
-    private static boolean isMatch(String s, String p) {
+    private boolean isMatch(String s, String p) {
+        if (s == null) {
+            return false;
+        }
+        if (p == null) {
+            return false;
+        }
         char[] sArray = s.toCharArray();
         char[] pArray = p.toCharArray();
         boolean[][] dp = new boolean[sArray.length + 1][pArray.length + 1];
@@ -37,10 +43,10 @@ public class Solution {
         }
         for (int i = 0; i < sArray.length; i++) {
             for (int j = 0; j < pArray.length; j++) {
-                dp[i + 1][j + 1] = dp[i][j + 1] && (pArray[j]=='*') ||
+                dp[i + 1][j + 1] = dp[i][j + 1] && (pArray[j] == '*') ||
                         dp[i][j] && atomicMatch(sArray[i], pArray[j]) ||
                         dp[i + 1][j] && pArray[j] == '*';
-                                System.out.println(" i:" + i + " j:" + j + " " + dp[i + 1][j + 1]);
+                System.out.println(" i:" + i + " j:" + j + " " + dp[i + 1][j + 1]);
             }
         }
         return dp[sArray.length][pArray.length];
@@ -51,15 +57,8 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-//        System.out.println(isMatch("cb", "?a"));
-        System.out.println(isMatch("aa", "*"));
-//        System.out.println(isMatch("ab", ".*"));
-//        System.out.println(isMatch("a", "ab*"));
-//        System.out.println(isMatch("adceb", "*a*b"));
-//        System.out.println(isMatch("acdcb", "a*c?b"));
-        System.out.println(isMatch("bbabbbbabbbbaabababbabbabaabbbabaaaabbaaabbaaabbaaaab", "**b**a*a*abaa*****b*"));
-//        "bbabbbbabbbbaabababbabbabaabbbabaaaabbaaabbaaabbaaaab"
-//        "**b**a*a*abaa*****b*"
+
+        System.out.println(new Solution().isMatch("aa", "a"));
 
     }
 }

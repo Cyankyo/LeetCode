@@ -1,71 +1,57 @@
-/*
- * Project: java-strategy
- *
- * File Created at 2018/12/17
- *
- * Copyright 2016 kyo Corporation Limited.
- * All rights reserved.
- *
- * This software is the confidential and proprietary information of
- * kyo Company. ("Confidential Information").  You shall not
- * disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license.
- */
-
-package Q4;
-
-/**
- * @Type Solution.java
- * @Desc
- * @Author cyankyo
- * @Date 2018/12/17 13:45
- * @Version 1.0
- */
-public class Solution {
-    public static String longestPalindrome(String s) {
-        int max = -1;
-        String maxStr = "";
-        int length = s.length();
-        if (length == 1) {
-            return s;
-        }
-        for (int mid = 0; mid < length; mid++) {
-//            System.out.println("mid:"+mid);
-
-            for (int l = 0; l <= Math.min(length - mid - 1, mid) && s.charAt(mid - l) == s.charAt(mid + l); l++) {
-//                System.out.println("l:" + l);
-//                System.out.println("left:" + (mid - l) + " right:" + (mid + l));
-                if (l * 2 + 1 > max) {
-                    maxStr = s.substring(mid - l, mid + l + 1);
-                    max = l * 2 + 1;
-//                    System.out.println("maxStr:" + maxStr);
-                }
-            }
-            for (int l = 1; l <= Math.min(length - mid , mid) && mid - l >= 0 && mid + l - 1 >= 0 && s.charAt(mid - l) == s.charAt(mid + l - 1); l++) {
-//                System.out.println("双数 l:" + l);
-//                System.out.println("双数 left:" + (mid - l) + " right:" + (mid + l - 1));
-                if (l * 2 > max) {
-                    maxStr = s.substring(mid - l, mid + l);
-                    max = 2 * l;
-//                    System.out.println("maxStr:" + maxStr);
-                }
-            }
-
-
-        }
-        return maxStr;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(longestPalindrome("abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababa"));
-    }
-}
-
-/*
- * Revision history
- * -------------------------------------------------------------------------
- *
- * Date Author Note
- * -------------------------------------------------------------------------
- * 2018/12/17 cyankyo create
- */
+///*
+// * Project: java-strategy
+// *
+// * File Created at 2018/12/17
+// *
+// * Copyright 2016 kyo Corporation Limited.
+// * All rights reserved.
+// *
+// * This software is the confidential and proprietary information of
+// * kyo Company. ("Confidential Information").  You shall not
+// * disclose such Confidential Information and shall use it only in
+// * accordance with the terms of the license.
+// */
+//
+//package Q4;
+//
+///**
+// * @Type Solution.java
+// * @Desc
+// * @Author cyankyo
+// * @Date 2018/12/17 13:45
+// * @Version 1.0
+// */
+//class Solution {
+//    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+//        int m = nums1.length;
+//        int n = nums2.length;
+//        int len = m + n;
+//        int i = 0;
+//        int j = 0;
+//        while ((i + j) < (m + n) / 2) {
+//            if (nums1[i] < nums2[j]) {
+//                i++;
+//                if (i == m) {
+//                    return (double) (nums1[i - 1] + nums1[i]) / 2;
+//                }
+//            } else {
+//                j++;
+//                if (j == n) {
+//
+//                }
+//            }
+//        }
+//    }
+//    public boolean isOdd(int n) {
+//        return (n & 1) == 1;
+//    }
+//}
+//
+///*
+// * Revision history
+// * -------------------------------------------------------------------------
+// *
+// * Date Author Note
+// * -------------------------------------------------------------------------
+// * 2018/12/17 cyankyo create
+// */
